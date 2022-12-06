@@ -1,0 +1,15 @@
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\CZU-TaskAssign.exe.config
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\CZU-TaskAssign.exe
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\CZU-TaskAssign.pdb
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.csproj.AssemblyReference.cache
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.csproj.SuggestedBindingRedirects.cache
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU_TaskAssign.Form1.resources
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU_TaskAssign.Properties.Resources.resources
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.csproj.GenerateResource.cache
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.csproj.CoreCompileInputs.cache
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.exe
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.pdb
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\MaterialSkin.dll
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\obj\Debug\CZU-TaskAssign.csproj.CopyComplete
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jacqueline.hakiziman\Desktop\SHEMA DOC\STUDY MATERIALS\WINTER SEMESTRAL PROJECTS 2021-2022\COMPUTER BASED SOFTWARE\C#-TASK ASSIGN\CZU-TaskAssign\CZU-TaskAssign\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,49 @@
+
+{% extends 'share/students/base.html'%}
+{% load static %}
+
+{% block title%} Update File {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- End Of page heading --> 
+    <div class="row d-flex ">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <h5 class="text-center font-500" style="font-weight: 700;">
+                            UPDATE FILE
+                        </h5>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-success">
+                                    <span class="alert-title">
+                                        {{ message }}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form }}
+                            <div class="form-group mt-2">
+                                <button class="btn btn-primary" type="submit">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>       
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    CKEDITOR.replace( 'description' );
+</script>
+{% endblock %}

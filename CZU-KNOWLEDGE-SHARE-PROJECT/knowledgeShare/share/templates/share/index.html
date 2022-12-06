@@ -1,0 +1,146 @@
+{% extends 'share/base.html' %}
+{% load static %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-pef sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img src="{% static 'images/czu.png' %}" alt="" class="inline-block" style="width:80px;">
+      </a>
+      <button class="navbar-toggler text-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active font-500 text-white" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-400 text-white" href="#">Features</a>
+          </li>
+        </ul>
+        <a href="{% url 'user_login' %}">
+            <button class="btn bg-white text-pef font-400 px-4">
+                Login <i class="fa fa-sign-in"></i>
+            </button>
+        </a>
+      </div>
+
+    </div>
+</nav>
+
+<div class="top-content d-flex justify-content-center align-items-center">
+	<div class="container d-flex justify-content-center align-items-center">
+		<div class="text-center">
+            <h3 class="text-white text-center">
+                Knowledge share platform for CZU students.
+            </h3>
+            <p class="text-center header-title">
+                Did you know that all your self-study papers and drafts you throw away after study can helps other students as well ? <br>
+                <strong>
+                    Lets collaborate :)
+                </strong>
+            </p>
+            <a href="{% url 'user_login' %}">
+                <button class="btn text-white bg-pef py-3 px-5 font-500">
+                    Get Started <i class="fa fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+	</div>	
+</div>
+
+<div class="interface bg-light d-flex justify-content-center align-items-center">
+    <div class="container ">  
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <h5 class="font-500 pt-5 mb-4">
+                    About this platform.
+                </h5>
+                <p class="text-dark mt-1">
+                    My name is Adelite Niyonshuti Shema, I have developed this platform after the idea which 
+                    I was working on in Database systems semester project.  
+                </p>
+                <a href="{% url 'user_login' %}">
+                    <button class="btn bg-pef text-white px-5 py-3 font-500 mt-2">
+                        Get Started <i class="fa fa-arrow-right"></i>
+                    </button>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/collabo.svg'%}" alt="dashboard" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="features-section">
+    <div class="container">
+        <div class="top-heading text-center">
+            <h3 class="font-500 mt-5">
+                Features
+            </h3>
+            <p class="text-dark font-400 mt-3 mb-3 ">
+                Take look at the features provided by this platform
+            </p>
+        </div>
+        <div class="features mt-4">
+            <div class="row">
+                <div class="col-md-4 mb-3 d-flex justify-content-between">
+                    <div class="icon-holder">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fa fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="content" style="margin-left: 15px;">
+                        <h5 class="font-700 text-dark">
+                            Collaboration
+                        </h5>
+                        <p class="text-black font-400">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 d-flex justify-content-between">
+                    <div class="icon-holder">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fa fa-sign-in"></i>
+                        </div>
+                    </div>
+                    <div class="content" style="margin-left: 15px;">
+                        <h5 class="font-700 text-dark">
+                            Collaboration
+                        </h5>
+                        <p class="text-black font-400">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 d-flex justify-content-between">
+                    <div class="icon-holder">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fa fa-sign-in"></i>
+                        </div>
+                    </div>
+                    <div class="content" style="margin-left: 15px;">
+                        <h5 class="font-700 text-dark">
+                            Collaboration
+                        </h5>
+                        <p class="text-black font-400">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

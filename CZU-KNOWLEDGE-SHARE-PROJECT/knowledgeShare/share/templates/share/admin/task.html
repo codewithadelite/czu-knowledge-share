@@ -1,0 +1,79 @@
+
+{% extends 'share/admin/base.html'%}
+{% load static %}
+
+{% block title%} Faculties {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Tasks</h1>
+    </div>  
+    <!-- End Of page heading --> 
+    <table class="table table-hover table-collapse" id="subject_table">
+        <thead>
+            <tr>
+                <th>
+                    TITLE
+                </th>
+                <th>
+                    DESCRIPTION
+                </th>
+                <th>
+                    TASK STATUS
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if tasks %}
+                {% for task in tasks %}
+                <tr>
+                    <td>
+                        {{ task.title }}
+                    </td>
+                    <td>
+                        {{ task.description }}
+                    </td>
+                    <td>
+
+                        {% if task.is_done %}
+                            <span class="badge badge-success p-2">
+                                &nbsp;Done&nbsp;&nbsp;
+                            </span>
+                        {% else %}
+                            <span class="badge badge-info p-2">
+                                Pending
+                            </span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if task.is_done %}
+
+                        <a href="{% url 'task_status' task.id %}" onclick="return confirm('Are you sure you want to set the task in progress ?')">
+                            <button class="btn btn-primary font-500 btn-sm">
+                                In Progress
+                            </button>
+                        </a>
+
+                        {% else %}
+
+                        <a href="{% url 'task_status' task.id %}" onclick="return confirm('Are you sure you want to set the task as Done ?')">
+                            <button class="btn btn-primary font-500 btn-sm">
+                                Done
+                            </button>
+                        </a>
+
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+            
+        </tbody>
+    </table>          
+</div>
+{% endblock %}
+

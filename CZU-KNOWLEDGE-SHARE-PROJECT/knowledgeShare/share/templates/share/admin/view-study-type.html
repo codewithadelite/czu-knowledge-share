@@ -1,0 +1,54 @@
+
+{% extends 'share/admin/base.html'%}
+{% load static %}
+
+{% block title%} Study Types {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Stusy Types</h1>
+        <a href="{% url 'add_study_type' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-plus fa-sm text-white-50"></i> Add study type</a>
+    </div>  
+    <!-- End Of page heading --> 
+    <table class="table table-hover table-collapse" id="subject_table">
+        <thead>
+            <tr>
+                <th>
+                    NAME
+                </th>
+                <th>
+                    CREATED AT
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if study_types %}
+                {% for study_type in study_types %}
+                <tr>
+                    <td>
+                        {{ study_type.name }}
+                    </td>
+                    <td>
+                        {{ study_type.created_at }}
+                    </td>
+                    <td>
+                        <a href="{% url 'update_study_type' study_type.id %}">
+                            <button class="btn btn-primary font-500 btn-sm">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+            
+        </tbody>
+    </table>          
+</div>
+{% endblock %}
+

@@ -1,0 +1,75 @@
+
+{% extends 'share/students/base.html'%}
+{% load static %}
+
+{% block title%} FILES FOUND {% endblock %}
+
+{% block style %}
+
+<style>
+    .img-link img:hover{
+        opacity: 0.5;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 class="h3 mb-0 text-gray-800" style="font-size: 25px;">Shared Papers Found ( {{ total_found }} )</h2>
+        <div>
+            <form action="{% url 'search_files' %}" method="GET">
+                <div class="input-group">
+                    <input placeholder="Search by Keyword,subject......." type="text" class="form-control" style="border-radius: 0px 0px 0px 0px;" name="q">
+                    <button type="submit" class="btn btn-dark" style="border-radius: 0px 0px 0px 0px;">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>  
+    <!-- End Of page heading --> 
+
+    <div class="files-container">
+        <div class="row">
+            {% if files_found %}
+                {% for file in files_found %}
+                    <div class="col-md-4 mb-4">
+                        <a href="{% url 'file_details' file.id %}" class="img-link">
+                            <img src="{{ file.cover_image.url }}" alt="" style="width: 100%;height: 250px; object-fit: cover; border-radius:10px;">
+                        </a>
+                        <div class="mt-2 ">
+                            <a href="{% url 'file_details' file.id %}" style="font-weight: 600;">
+                                {{ file.title }}
+                            </a>
+                        </div>
+                        <div class="mt-2 d-flex justify-content-between">
+                            {% if file.is_public %}
+                            <div>
+                                <i class="fa fa-globe" style="color: #04AA6D;"></i> <strong style="color:#04AA6D;">Public</strong>
+                            </div>
+                            {% else %}
+                            <div>
+                                <i class="fa fa-ban" style="color: #9b0000;"></i> <strong class="text-danger">Private</strong>
+                            </div>
+                            {% endif %}
+                            <span>
+                                {{ file.created_at|timesince }} Ago
+                            </span>
+                        </div>
+                        <div class="mt-2">
+                            <img src="{% static 'images/users/prfl.jpg' %}" style="width: 50px; height:50px; object-fit: cover; border: 1px solid #667080; border-radius: 50px;">
+                            <strong style="color: black;">{{ file.user }}</strong>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+            
+</div>
+{% endblock %}

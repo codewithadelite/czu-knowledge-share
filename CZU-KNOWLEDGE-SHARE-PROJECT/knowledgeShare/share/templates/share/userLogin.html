@@ -1,0 +1,76 @@
+{% extends 'share/base.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+<div class="content">
+	<div class="container mt-5">
+		<div class="row holder bg-light d-flex justify-content-center">
+			
+			<div class="col-md-4 d-flex justify-content-center align-items-center" >
+				<a href="{% url 'home' %}">
+                    <img src="{% static 'images/pef.png' %}" style="width: 80px;">
+                </a>
+			</div>
+            <div class="col-md-5">
+				<div class="container">
+					<div class="card mt-5">
+						<div class="card-content p-3">
+							<div class="card-body">
+								<h4 class="text-center">Log In</h4>
+								<form action="{% url 'user_login' %}" method="POST">
+									{% if messages %}
+										{% for message in messages %}
+											<div class="alert alert-danger">
+												<span class="alert-title font-500">{{ message }}</span>
+											</div>
+										{% endfor %}
+									{% endif %}
+									{% csrf_token %}
+									<div class="form-group">
+										<label for="username" class="font-500">Username</label>
+										<div class="input-group">
+											<input type="text" class="form-control" name="username" required="">
+											<i class="fa fa-user input-group-addon p-3 px-4 btn btn-outline-danger disabled" id="icon"></i>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="username" class="font-500">Password</label>
+										<div class="input-group">
+											<input type="password" class="form-control" name="password" required>
+											<i class="fa fa-lock input-group-addon p-3 px-4 btn btn-outline-danger disabled" id="icon"></i>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" name="">
+											<label class="form-check-label" for="gridCheck">
+										        Remeber me
+										     </label>
+										</div>
+									</div>
+
+									<hr>
+									<span>Forgot your password ? <a href="">Click Me</a></span>
+									<hr>
+									<div class="form-group">
+										<button type="submit" class="btn btn-danger btn-block font-500">
+                                            SIGN IN <i class="fa fa-sign-in"></i>
+                                        </button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="text-center mt-4 mb-4">
+						<span style="font-weight: 900;">&copy;2021 Developed By Adelite Niyonshuti Shema | <a href="{% url 'home' %}">KNOWLEDGE SHARE</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

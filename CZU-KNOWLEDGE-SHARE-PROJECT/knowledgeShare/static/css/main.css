@@ -1,0 +1,78 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-400{
+    font-weight: 400;
+}
+.font-500{
+    font-weight: 500;
+}
+.font-700{
+    font-weight: 700;
+}
+
+.bg-pef{
+    background-color: #9b0000;
+}
+.text-pef{
+    color: #9b0000;
+}
+
+.top-content{
+	width:100%;
+	height:400px;
+	background-image: url('../images/students.jpg');
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.top-content::before{
+	content: "";
+	width:100%;
+	height:400px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.80);
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.header-title{
+    color:white;
+}
+
+.interface{
+    width: 100%;
+}
+.interface img{
+    width: 100%;
+}
+
+.features-section{
+    width: 100%;
+}
+.features-section .top-heading p{
+    font-size: 22px;
+}
+.features-section .features .icon{
+    width: 50px;
+    height: 50px;
+    background-color: #9b0000;
+    color:white;
+    border-radius: 50px;
+}
+.features-section .features h5{
+    font-size: 18px;
+}
+.features-section .features p{
+    font-size: 14px;
+}
+
+.login-row{
+    border-radius: 10px;
+}
+.files-container .image{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+}

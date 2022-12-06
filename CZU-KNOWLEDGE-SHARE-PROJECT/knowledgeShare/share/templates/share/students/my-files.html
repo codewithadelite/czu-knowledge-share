@@ -1,0 +1,92 @@
+
+{% extends 'share/students/base.html'%}
+{% load static %}
+
+{% block title%} MY FILES {% endblock %}
+
+{% block style %}
+<style>
+.cover-img{
+    width: 60px;
+    height:60px;
+    background-color: #ddd;
+}
+td{
+    vertical-align: middle !important;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h2 class="h3 mb-0 text-gray-800" style="font-size: 25px;">My Papers</h2>
+    </div>  
+    <!-- End Of page heading --> 
+
+    <div class="table-container">
+        <table class="table table-hover table-collapse">
+            <thead>
+                <tr>
+                    <th>COVER IMAGE</th>
+                    <th>TITLE</th>
+                    <th>SUBJECT</th>
+                    <th>STATUS</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if files %}
+                    {% for file in files %}
+                        <tr>
+                            <td>
+                                <img src="{{ file.cover_image.url }}" class="cover-img">
+                            </td>
+                            <td>{{ file.title }}</td>
+                            <td>{{ file.subject }}</td>
+                            {% if file.is_public %}
+                            <td>
+                                <span class="badge badge-success p-2">
+                                    &nbsp;Public&nbsp;&nbsp;
+                                </span>
+                            </td>
+                            {% else %}
+                            <td>
+                                <span class="badge badge-danger p-2">
+                                    &nbsp;Private&nbsp;
+                                </span>
+                            </td>
+                            {% endif %}
+                            <td>
+                                <a href="{% url 'update_file' file.id %}">
+                                    <button class="btn btn-primary font-500 btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </a>
+                                {% if file.is_public %}
+                                <a href="{% url 'file_status' file.id %}" onclick="return confirm('Are you sure you want to set it to private ?')">
+                                    <button class="btn btn-primary font-500 btn-sm">
+                                        Set to private
+                                    </button>
+                                </a>
+                                {% else %}
+                                <a href="{% url 'file_status' file.id %}" onclick="return confirm('Are you sure you want to set it to public ?')">
+                                    <button class="btn btn-primary font-500 btn-sm">
+                                        Set to public &nbsp;
+                                    </button>
+                                </a>
+                                {% endif %}
+                            </td>
+                            
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+    
+            
+</div>
+{% endblock %}

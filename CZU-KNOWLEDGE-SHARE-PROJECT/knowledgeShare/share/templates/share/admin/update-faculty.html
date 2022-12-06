@@ -1,0 +1,44 @@
+
+{% extends 'share/admin/base.html'%}
+{% load static %}
+
+{% block title%} Dashboard {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- End Of page heading --> 
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <h5 class="text-center font-500" style="font-weight: 700;">
+                            UPDATE FACULTY
+                        </h5>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-success">
+                                    <span class="alert-title">
+                                        {{ message }}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <form method="POST" action="#">
+                            {% csrf_token %}
+                            {{ form }}
+                            <div class="form-group mt-2">
+                                <button class="btn btn-primary" type="submit">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>       
+</div>
+{% endblock %}
+

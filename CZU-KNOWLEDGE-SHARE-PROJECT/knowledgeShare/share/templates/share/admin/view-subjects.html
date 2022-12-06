@@ -1,0 +1,89 @@
+
+{% extends 'share/admin/base.html'%}
+{% load static %}
+
+{% block title%} Dashboard {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Subjects</h1>
+        <a href="{% url 'add_subject' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-plus fa-sm text-white-50"></i> Add Subject</a>
+    </div>  
+    <!-- End Of page heading --> 
+    <table class="table table-hover table-collapse" id="subject_table">
+        <thead>
+            <tr>
+                <th>
+                    SUBJECT CODE
+                </th>
+                <th>
+                    NAME
+                </th>
+                <th>
+                    CREATED AT
+                </th>
+                <th>
+                    STATUS
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if subjects %}
+                {% for subject in subjects %}
+                <tr>
+                    <td>
+                        {{ subject.subject_code }}
+                    </td>
+                    <td>
+                        {{ subject.name }}
+                    </td>
+                    <td>
+                        {{ subject.created_at }}
+                    </td>
+                    <td>
+
+                        {% if subject.status == 1 %}
+                            <span class="badge badge-success p-2">
+                                &nbsp;Active&nbsp;&nbsp;
+                            </span>
+                        {% else %}
+                            <span class="badge badge-info p-2">
+                                Deactive
+                            </span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'update_subject' subject.id %}">
+                            <button class="btn btn-primary font-500 btn-sm">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                        </a>
+    
+                        {% if subject.status == 1 %}
+                            <a href="{% url 'change_subject_status' subject.id %}" onclick="return(confirm('Are you sure you want to deactivate this subject ?'))">
+                                <button class="btn btn-primary font-500 btn-sm">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'change_subject_status' subject.id %}" onclick="return(confirm('Are you sure you want to activate this subject ?'))">
+                                <button class="btn btn-primary font-500 btn-sm">
+                                    <i class="fa fa-check"></i>
+                                </button>
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+            
+        </tbody>
+    </table>          
+</div>
+{% endblock %}
+

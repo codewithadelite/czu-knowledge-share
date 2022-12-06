@@ -1,0 +1,79 @@
+
+{% extends 'share/students/base.html'%}
+{% load static %}
+
+{% block title%} Dashboard {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Student Dashboard</h1>
+        <a href="{% url 'shared_files' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Recent Shared Files</a>
+    </div>  
+    <!-- End Of page heading --> 
+
+    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Total students Card -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                MY FILES</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                {{ total_files }}
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-file fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                FILES PERMISSION REQUEST</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                {{ total_files_permission_request }}
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-file fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                               FILES REQUEST APPROVED</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                {{ total_files_permission_approved }}
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-file fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->             
+</div>
+{% endblock %}
