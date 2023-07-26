@@ -13,9 +13,11 @@ And this web application provide REST API endpoints to allow communication with 
 
 ## 📷 Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://raw.githubusercontent.com/codewithadelite/czu-knowledge-share/knowledge-share-app/CZU-KNOWLEDGE-SHARE-PROJECT/knowledgeShare/static/images/czu1.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://raw.githubusercontent.com/codewithadelite/czu-knowledge-share/knowledge-share-app/CZU-KNOWLEDGE-SHARE-PROJECT/knowledgeShare/static/images/czu2.png)
+
+![App Screenshot](https://raw.githubusercontent.com/codewithadelite/czu-knowledge-share/knowledge-share-app/CZU-KNOWLEDGE-SHARE-PROJECT/knowledgeShare/static/images/czu3.png)
 
 ## Features
 
